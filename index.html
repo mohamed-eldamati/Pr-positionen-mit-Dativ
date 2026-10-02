@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Präpositionen mit Dativ</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#eaf6ff;--bg2:#fff4e3;--ink:#1d2b3a;--mut:#5b6b7b;--card:#ffffffcc;--line:#ffffff;--b1:#2f80ed;--b2:#f2994a;--b3:#27ae83;--ok:#1e9e6a;--no:#e0524d;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#16212e;--bg2:#2a2230;--ink:#eef3f8;--mut:#a9b7c6;--card:#243244cc;--line:#33465c}}
+:root[data-theme="dark"]{--bg1:#16212e;--bg2:#2a2230;--ink:#eef3f8;--mut:#a9b7c6;--card:#243244cc;--line:#33465c}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Nunito',system-ui,sans-serif;font-weight:600;color:var(--ink);background:linear-gradient(135deg,var(--bg1),var(--bg2));background-attachment:fixed;min-height:100%;overflow-x:hidden;font-size:20px;line-height:1.5}
+.blob{position:fixed;border-radius:50%;filter:blur(60px);opacity:.45;z-index:0;animation:float 14s ease-in-out infinite}
+.blob.a{width:340px;height:340px;background:#8ec5ff;top:-80px;left:-80px}
+.blob.b{width:300px;height:300px;background:#ffc98b;bottom:-60px;right:-60px;animation-delay:-5s}
+.blob.c{width:240px;height:240px;background:#9be8c8;top:45%;left:60%;animation-delay:-9s}
+@keyframes float{50%{transform:translate(40px,-50px) scale(1.12)}}
+main{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:28px 18px 80px}
+h1,h2,h3{font-family:'Baloo 2',sans-serif;margin:0;line-height:1.1}
+h1{font-size:clamp(40px,8vw,72px);font-weight:800;text-align:center;animation:pop .9s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.7) translateY(20px)}}
+.sub{text-align:center;color:var(--mut);font-size:24px;margin:6px 0 30px;animation:pop 1s .15s both}
+h2{font-size:clamp(30px,5vw,42px);margin:54px 0 18px;text-align:center}
+.card{background:var(--card);backdrop-filter:blur(10px);border:2px solid var(--line);border-radius:28px;padding:22px;box-shadow:0 12px 34px #2f80ed1f}
+.q{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.q .card{border-top:8px solid var(--c);transition:transform .25s}
+.q .card:hover{transform:translateY(-6px) rotate(-.6deg)}
+.q h3{font-size:38px;color:var(--c)}
+.q .ar{color:var(--mut);font-size:18px}
+.preps{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.sp{font-family:inherit;border:0;cursor:pointer;background:var(--c,var(--b1));color:#fff;border-radius:999px;font-weight:800;font-size:inherit;padding:.35em .9em;display:inline-flex;gap:.4em;align-items:center;transition:transform .15s,box-shadow .15s;box-shadow:0 5px 0 #0002}
+.sp:hover{transform:translateY(-2px)}.sp:active{transform:translateY(3px);box-shadow:0 1px 0 #0002}
+.sp.big{font-size:34px;font-family:'Baloo 2'}
+.sp.play{animation:pulse .5s}
+@keyframes pulse{50%{transform:scale(1.12)}}
+.ex{font-size:24px;margin:12px 0;display:flex;gap:10px;align-items:center;justify-content:space-between}
+.ex b{color:var(--c)}
+.mini{width:46px;height:46px;border-radius:50%;border:0;cursor:pointer;background:var(--c);color:#fff;font-size:20px;flex:none;box-shadow:0 4px 0 #0002}
+.mini:active{transform:translateY(3px)}
+table{width:100%;border-collapse:separate;border-spacing:0 10px;font-size:26px;text-align:center}
+td,th{padding:12px;background:var(--card);border:2px solid var(--line)}
+th{font-family:'Baloo 2';background:var(--b1);color:#fff;border-radius:16px 16px 0 0}
+.kz{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.kz .card{text-align:center;font-size:26px;cursor:pointer;transition:transform .3s}
+.kz .card:hover{transform:scale(1.05)}
+.kz .res{font-family:'Baloo 2';font-size:40px;color:var(--b3);font-weight:800}
+.kz s{color:var(--mut);text-decoration:none}
+.fill{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:26px;margin:16px 0}
+input,select{font:inherit;font-size:24px;border:3px solid var(--b1);border-radius:14px;padding:6px 10px;background:var(--card);color:var(--ink);width:150px;text-align:center}
+input.ok,select.ok{border-color:var(--ok);background:#1e9e6a22}
+input.no,select.no{border-color:var(--no);background:#e0524d22;animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.btn{font-family:'Baloo 2';font-size:26px;border:0;border-radius:18px;padding:10px 26px;cursor:pointer;color:#fff;background:var(--b1);box-shadow:0 5px 0 #0003}
+.btn.o{background:var(--b2)}
+.btn:active{transform:translateY(3px)}
+.m{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:22px;margin:14px 0}
+.m span{flex:1 1 280px}
+.m select{width:90px}
+.score{text-align:center;font-family:'Baloo 2';font-size:34px;margin-top:12px;min-height:50px}
+.pdot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--b3);margin-right:8px}
+#nov{display:none;text-align:center;background:#fff3cd;color:#664d03;padding:10px;border-radius:14px;margin-bottom:16px;font-size:18px}
+:focus-visible{outline:4px solid var(--b2);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.how{text-align:center;font-size:26px;margin:0 0 10px}
+.legend{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:18px}
+.legend span{background:var(--bg1);border-radius:999px;padding:4px 16px;font-size:20px;font-weight:800}
+.qi{padding:16px 0;border-top:2px dashed var(--line)}
+.qi .sent{font-size:26px;display:flex;gap:12px;align-items:center;justify-content:space-between}
+.qi mark{background:#ffe08a;color:#1d2b3a;border-radius:8px;padding:0 8px;font-weight:800}
+.ch{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.ch button{flex:1 1 110px;font-family:'Baloo 2';font-size:26px;border:3px solid var(--c);color:var(--c);background:var(--card);border-radius:16px;padding:8px;cursor:pointer;transition:.15s}
+.ch button:hover{background:var(--c);color:#fff}
+.ch button.ok{background:var(--ok);border-color:var(--ok);color:#fff}
+.ch button.no{background:var(--no);border-color:var(--no);color:#fff;animation:shake .4s}
+.fb{font-size:22px;margin-top:8px;min-height:30px;color:var(--ok);font-weight:800}
+</style>
+</head>
+<body>
+<div class="blob a"></div><div class="blob b"></div><div class="blob c"></div>
+<main>
+<h1>Präpositionen mit Dativ</h1>
+<p class="sub">Wohin? · Wo? · Woher? &nbsp;<button class="sp" onclick="say('Wohin? Wo? Woher?',this)" aria-label="Hören">🔊</button></p>
+<div id="nov">🔇 مفيش صوت ألماني على جهازك — ثبّت لغة Deutsch من إعدادات الصوت (Text-to-speech).</div>
+
+<div class="q">
+ <div class="card" style="--c:var(--b1)">
+  <h3>Wohin?</h3><div class="ar">إلى أين؟</div>
+  <div class="preps"><button class="sp big" onclick="say('zu',this)">🔊 zu</button></div>
+  <div class="ex"><span>Sie geht <b>zum</b> Chef.</span><button class="mini" onclick="say('Sie geht zum Chef.',this)">🔊</button></div>
+  <div class="ex"><span>Sie geht <b>zur</b> Bank.</span><button class="mini" onclick="say('Sie geht zur Bank.',this)">🔊</button></div>
+ </div>
+ <div class="card" style="--c:var(--b2)">
+  <h3>Wo?</h3><div class="ar">فين؟</div>
+  <div class="preps"><button class="sp big" onclick="say('bei',this)">🔊 bei</button><button class="sp big" onclick="say('in',this)">🔊 in</button></div>
+  <div class="ex"><span>Sie ist <b>beim</b> Chef.</span><button class="mini" onclick="say('Sie ist beim Chef.',this)">🔊</button></div>
+  <div class="ex"><span>Sie ist <b>bei der</b> Chefin.</span><button class="mini" onclick="say('Sie ist bei der Chefin.',this)">🔊</button></div>
+  <div class="ex"><span>Er ist <b>im</b> Haus.</span><button class="mini" onclick="say('Er ist im Haus.',this)">🔊</button></div>
+  <div class="ex"><span>Er ist <b>in der</b> Bank.</span><button class="mini" onclick="say('Er ist in der Bank.',this)">🔊</button></div>
+ </div>
+ <div class="card" style="--c:var(--b3)">
+  <h3>Woher?</h3><div class="ar">منين؟</div>
+  <div class="preps"><button class="sp big" onclick="say('aus',this)">🔊 aus</button><button class="sp big" onclick="say('von',this)">🔊 von</button></div>
+  <div class="ex"><span>Er kommt <b>aus dem</b> Haus.</span><button class="mini" onclick="say('Er kommt aus dem Haus.',this)">🔊</button></div>
+  <div class="ex"><span>Er kommt <b>aus der</b> Bank.</span><button class="mini" onclick="say('Er kommt aus der Bank.',this)">🔊</button></div>
+  <div class="ex"><span>Sie kommt <b>vom</b> Chef.</span><button class="mini" onclick="say('Sie kommt vom Chef.',this)">🔊</button></div>
+  <div class="ex"><span>Sie kommt <b>von der</b> Chefin.</span><button class="mini" onclick="say('Sie kommt von der Chefin.',this)">🔊</button></div>
+ </div>
+</div>
+
+<h2>zu · bei · aus · von = Dativ</h2>
+<div class="card">
+<table>
+<tr><th>der</th><th>das</th><th>die</th></tr>
+<tr><td onclick="say('dem')">dem 🔊</td><td onclick="say('dem')">dem 🔊</td><td onclick="say('der')">der 🔊</td></tr>
+</table>
+<p style="text-align:center;margin:6px 0 0;font-size:24px">in + Dativ = <b>Wo?</b> &nbsp;(im Haus · in der Bank)</p>
+</div>
+
+<h2>Kurzformen</h2>
+<div class="kz" id="kz"></div>
+
+<h2>Übung 1: Ergänzen</h2>
+<div class="card">
+ <div class="fill">Sie geht <input data-a="zum" value="zum" readonly class="ok"> Chef / <input data-a="zur"> Bank.</div>
+ <div class="fill">Sie ist <input data-a="beim"> Chef / bei der Chefin.</div>
+ <div class="fill">Er kommt aus dem Haus / <input data-a="aus der"> Bank.</div>
+ <div class="fill">Sie kommt <input data-a="vom"> Chef / von der Chefin.</div>
+ <div class="row"><button class="btn" onclick="chk()">Prüfen ✔</button><button class="btn o" onclick="sol()">Lösung 💡</button></div>
+ <div class="score" id="s1"></div>
+</div>
+
+<h2>Übung 2: Wohin? Wo? Woher?</h2>
+<div class="card">
+ <p class="how">اضغط على السؤال اللي الجملة بتجاوب عليه 👇</p>
+ <div class="legend"><span>zu = Wohin</span><span>bei / in = Wo</span><span>aus / von = Woher</span></div>
+ <div id="qs"></div>
+ <div class="score" id="s2"></div>
+ <div class="row"><button class="btn o" onclick="reset2()">Nochmal 🔄</button></div>
+</div>
+</main>
+<script>
+var voice=null;
+function pick(){var v=speechSynthesis.getVoices();voice=v.find(function(x){return /^de[-_]DE/i.test(x.lang)})||v.find(function(x){return /^de/i.test(x.lang)})||null;
+document.getElementById('nov').style.display=(v.length&&!voice)?'block':'none'}
+if('speechSynthesis' in window){pick();speechSynthesis.onvoiceschanged=pick}
+function say(t,el){
+ if(!('speechSynthesis' in window)){return}
+ speechSynthesis.cancel();
+ var u=new SpeechSynthesisUtterance(t);u.lang='de-DE';if(voice)u.voice=voice;u.rate=.8;
+ speechSynthesis.speak(u);
+ if(el){el.classList.remove('play');void el.offsetWidth;el.classList.add('play')}
+}
+var K=[['zu','der','zur'],['zu','dem','zum'],['bei','dem','beim'],['von','dem','vom'],['in','dem','im']];
+var kz=document.getElementById('kz');
+K.forEach(function(k){var d=document.createElement('div');d.className='card';d.tabIndex=0;
+ d.innerHTML='<s>'+k[0]+' + '+k[1]+'</s><div class="res">'+k[2]+' 🔊</div>';
+ d.onclick=function(){say(k[2],d)};d.onkeydown=function(e){if(e.key==='Enter')d.click()};kz.appendChild(d)});
+function norm(s){return s.trim().toLowerCase().replace(/\s+/g,' ')}
+function chk(){var ins=document.querySelectorAll('input[data-a]'),n=0;
+ ins.forEach(function(i){var ok=norm(i.value)===i.dataset.a;i.className=ok?'ok':'no';if(ok)n++});
+ document.getElementById('s1').textContent=n+' / '+ins.length+(n===ins.length?' 🎉 Super!':'');
+ if(n===ins.length)say('Super!')}
+function sol(){document.querySelectorAll('input[data-a]').forEach(function(i){i.value=i.dataset.a;i.className='ok'});
+ document.getElementById('s1').textContent='✔'}
+var Q=[
+['Am Nachmittag geht Julia <mark>zum</mark> Chef.','Wohin','zum → zu'],
+['Um 15 Uhr ist Julia <mark>beim</mark> Chef.','Wo','beim → bei'],
+['Julia kommt <mark>vom</mark> Chef und trifft Tom.','Woher','vom → von'],
+['Tom geht heute um 9 Uhr <mark>zur</mark> Bank.','Wohin','zur → zu'],
+['Das Gespräch <mark>in der</mark> Bank dauert eine Stunde.','Wo','in der → in'],
+['Tom kommt <mark>aus der</mark> Bank und trifft Julia.','Woher','aus der → aus']];
+var SP=['am Nachmittag geht Julia zum Chef.','Um fünfzehn Uhr ist Julia beim Chef.','Julia kommt vom Chef und trifft Tom.','Tom geht heute um neun Uhr zur Bank.','Das Gespräch in der Bank dauert eine Stunde.','Tom kommt aus der Bank und trifft Julia.'];
+SP[0]='Am Nachmittag geht Julia zum Chef.';
+var CL={Wohin:'var(--b1)',Wo:'var(--b2)',Woher:'var(--b3)'},done=0,right=0;
+function reset2(){done=0;right=0;document.getElementById('s2').textContent='';var box=document.getElementById('qs');box.innerHTML='';
+ Q.forEach(function(q,i){var d=document.createElement('div');d.className='qi';
+  d.innerHTML='<div class="sent"><span>'+(i+1)+'. '+q[0]+'</span><button class="mini" style="--c:var(--b1)" aria-label="Hören">🔊</button></div><div class="ch"></div><div class="fb"></div>';
+  d.querySelector('.mini').onclick=function(){say(SP[i])};
+  var ch=d.querySelector('.ch');
+  ['Wohin','Wo','Woher'].forEach(function(w){var b=document.createElement('button');b.textContent=w;b.style.setProperty('--c',CL[w]);
+   b.onclick=function(){if(d.dataset.d)return;
+    if(w===q[1]){b.className='ok';d.dataset.d=1;done++;right++;d.querySelector('.fb').textContent='✔ '+q[2]+' = '+q[1];say(w);fin()}
+    else{b.className='no';setTimeout(function(){b.className=''},600)}};
+   ch.appendChild(b)});
+  box.appendChild(d)})}
+function fin(){if(done===Q.length){document.getElementById('s2').textContent='🎉 Perfekt! 6 / 6';say('Perfekt!')}}
+reset2();
+</script>
+</body>
+</html>
